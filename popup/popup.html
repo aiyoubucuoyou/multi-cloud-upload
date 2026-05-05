@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>多网盘上传</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>多网盘上传助手</h2>
+    
+    <!-- 文件选择 -->
+    <div class="file-section">
+      <div class="file-select" id="fileSelectArea">
+        <input type="file" id="fileInput">
+        <span id="fileName">点击选择要上传的文件</span>
+      </div>
+    </div>
+    
+    <!-- 网盘选择 -->
+    <div class="cloud-list">
+      <div class="cloud-item">
+        <input type="checkbox" id="quark" checked>
+        <label>夸克网盘</label>
+        <span class="status" id="quarkStatus"></span>
+      </div>
+      <div class="cloud-item">
+        <input type="checkbox" id="pan123" checked>
+        <label>123盘</label>
+        <span class="status" id="pan123Status"></span>
+      </div>
+      <div class="cloud-item">
+        <input type="checkbox" id="baidu" checked>
+        <label>百度网盘</label>
+        <span class="status" id="baiduStatus"></span>
+      </div>
+    </div>
+    
+    <!-- 上传按钮 -->
+    <button id="uploadBtn" disabled>开始上传</button>
+    
+    <div class="hint-text">上传进度将在独立窗口中显示</div>
+    
+    <!-- 网盘目录配置（放在最下面） -->
+    <div class="url-config">
+      <h3>网盘目录配置 <span class="hint">(首次使用请配置)</span></h3>
+      <div class="url-item">
+        <label>夸克网盘</label>
+        <input type="text" id="quarkUrl" placeholder="粘贴目录URL">
+        <div class="url-hint" id="quarkUrlHint"></div>
+      </div>
+      <div class="url-item">
+        <label>123盘</label>
+        <input type="text" id="pan123Url" placeholder="粘贴目录URL">
+        <div class="url-hint" id="pan123UrlHint"></div>
+      </div>
+      <div class="url-item">
+        <label>百度网盘</label>
+        <input type="text" id="baiduUrl" placeholder="粘贴目录URL">
+        <div class="url-hint" id="baiduUrlHint"></div>
+      </div>
+      <button id="saveConfigBtn">保存配置</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

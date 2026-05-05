@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>上传管理器</title>
+  <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>上传任务管理</h2>
+      <div class="header-actions">
+        <button id="clearTasksBtn" class="clear-tasks-btn">清理记录</button>
+        <button id="newUploadBtn" class="new-upload-btn">+ 新上传</button>
+      </div>
+    </div>
+    
+    <div id="taskList" class="task-list">
+      <!-- 任务列表动态生成 -->
+    </div>
+    
+    <div id="emptyState" class="empty-state">
+      <p>暂无上传任务</p>
+      <p class="hint">点击"新上传"开始上传文件</p>
+    </div>
+  </div>
+  
+  <script src="manager.js"></script>
+</body>
+</html>
